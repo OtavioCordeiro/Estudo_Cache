@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Estudo_Cache_Redis\Estudo_Cache_Redis.csproj">
+    <ProjectReference Include="..\Estudo_Cache_Redis\Estudo_Cache_Redis_Simples.csproj">
       <Project>{0ac370eb-87f6-47ac-ae7e-f6c6f8888b70}</Project>
-      <Name>Estudo_Cache_Redis</Name>
+      <Name>Estudo_Cache_Redis_Simples</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo_Cache_Redis", "Estudo_Cache_Redis\Estudo_Cache_Redis.csproj", "{0AC370EB-87F6-47AC-AE7E-F6C6F8888B70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estudo_Cache_Redis_Simples", "Estudo_Cache_Redis\Estudo_Cache_Redis_Simples.csproj", "{0AC370EB-87F6-47AC-AE7E-F6C6F8888B70}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{E8630A27-E05B-4DB4-8029-B61FCCF48553}"
 EndProject

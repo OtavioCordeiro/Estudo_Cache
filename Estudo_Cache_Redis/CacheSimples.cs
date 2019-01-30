@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Estudo_Cache_Redis
 {
-    public class Cache
+    public class CacheSimples
     {
         IDatabase cacheDb;
         private IServer server;
         private string key = "otc";
 
-        public Cache()
+        public CacheSimples()
         {
-            RedisConnectorHelper helper = new RedisConnectorHelper();
+            var helper = new RedisConnectorHelper();
 
             cacheDb = helper.RedisConnection.Value.GetDatabase();
 

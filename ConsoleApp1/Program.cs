@@ -11,7 +11,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Cache cache = new Cache();
+            CacheSimples cache = new CacheSimples();
 
             for (int i = 0; i < 10; i++)
             {
