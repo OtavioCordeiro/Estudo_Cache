@@ -8,7 +8,7 @@ namespace Estudo_Cache_Abstracao.Interfaces
 {
     public interface ICache
     {
-        void SetData<T>(string key, T data);
+        void SetData(string key, object data);
 
         T GetData<T>(string key);
 

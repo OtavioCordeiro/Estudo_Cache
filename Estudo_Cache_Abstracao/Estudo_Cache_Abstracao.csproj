@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CacheTimeWrapper.cs" />
     <Compile Include="CacheWrapper.cs" />
     <Compile Include="Interfaces\ICache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

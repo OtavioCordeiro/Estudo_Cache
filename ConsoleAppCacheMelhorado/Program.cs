@@ -1,4 +1,5 @@
-﻿using Estudo_Cache_Abstracao.Interfaces;
+﻿using Estudo_Cache_Abstracao;
+using Estudo_Cache_Abstracao.Interfaces;
 using Estudo_Cache_Redis_Melhorado;
 using Estudo_Cache_Redis_Melhorado.Interfaces;
 using System;
@@ -19,7 +20,11 @@ namespace ConsoleAppCacheMelhorado
             IConnector connector = new RedisConnector(connectionString);
             ISerializer serializer = new MySerializer();
 
-            ICache cache = new RedisCache(connector, serializer);
+            ICache rediCache = new RedisCache(connector, serializer);
+
+            var cacheWrapper = new CacheWrapper(rediCache);
+
+            var cache = new CacheTimeWrapper(cacheWrapper);
 
             Api api = new Api(cache);
 

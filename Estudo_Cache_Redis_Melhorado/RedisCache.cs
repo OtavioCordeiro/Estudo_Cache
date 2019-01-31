@@ -35,7 +35,7 @@ namespace Estudo_Cache_Redis_Melhorado
             return default(T);
         }
 
-        public void SetData<T>(string key, T data)
+        public void SetData(string key, object data)
         {
             var dataMessage = _serializer.Serializer(data);
 

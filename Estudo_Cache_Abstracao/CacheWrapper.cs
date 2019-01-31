@@ -7,31 +7,31 @@ using System.Threading.Tasks;
 
 namespace Estudo_Cache_Abstracao
 {
-    public class CacheWrapper
+    public class CacheWrapper : ICache
     {
-        private ICache _cache;
+        private ICache inner;
 
         public CacheWrapper(ICache cache)
         {
-            _cache = cache;
+            inner = cache;
         }
 
-        public void SetData<T>(string key, T data)
+        public void SetData(string key, object data)
         {
             if (data != null)
             {
-                _cache.SetData(key, data);
+                inner.SetData(key, data);
             }
         }
 
         public T GetData<T>(string key)
         {
-            return _cache.GetData<T>(key);
+            return inner.GetData<T>(key);
         }
 
         public void ClearData(string key)
         {
-            _cache.ClearData(key);
+            inner.ClearData(key);
         }
     }
 }
