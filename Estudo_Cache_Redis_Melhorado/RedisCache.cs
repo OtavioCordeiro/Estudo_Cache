@@ -29,14 +29,17 @@ namespace Estudo_Cache_Redis_Melhorado
         {
             var result = _dataBase.StringGet(key);
 
-            return _serializer.Deserializer<T>(result.ToString());
+            if (result.HasValue)
+                return _serializer.Deserializer<T>(result.ToString());
+
+            return default(T);
         }
 
         public void SetData<T>(string key, T data)
         {
             var dataMessage = _serializer.Serializer(data);
 
-            _dataBase.SetAdd(key, dataMessage);
+            _dataBase.StringSet(key, dataMessage, TimeSpan.FromSeconds(10));
         }
     }
 }
